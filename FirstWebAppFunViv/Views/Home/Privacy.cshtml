@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Price Calculator";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <label for="hours">Number of Hours:</label>
+    <input type="number" id="hours" name="hours">
+    <span id="hours-error" style="color: red;"></span>
+</div>
+
+<div>
+    <label for="rate">Hourly Rate:</label>
+    <input type="text" id="rate" name="rate" value="50" readonly>
+</div>
+
+<div>
+    <button id="calculate">Calculate Total</button>
+</div>
+
+<div>
+    <label for="total">Total Charge:</label>
+    <input type="text" id="total" name="total" readonly>
+</div>
+
+<a href="/">Back to Home</a>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/calculator.js"></script>
+}
